@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.main.AssessmentFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F4F2">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:src="@drawable/ic_button_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="Assessment"
+            android:textColor="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintStart_toEndOf="@+id/btn_back"
+            app:layout_constraintTop_toTopOf="@+id/btn_back" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:backgroundTint="#E8DDD9"
+            app:cardCornerRadius="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_back">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_count_symptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_3sdp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="1 of 14"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/_14ssp" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_symptom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="symptom"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:textAlignment="center"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_assessment"
+            tools:itemCount="6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_symptom"
+            tools:listitem="@layout/item_assessment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:text="Selanjutnya"
+            android:textSize="@dimen/_12ssp"
+            android:backgroundTint="@color/secondary"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_assessment" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

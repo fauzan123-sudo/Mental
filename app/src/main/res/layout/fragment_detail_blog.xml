@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.main.DetailBlogFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mcv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_bottom_cocolate"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_button_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Understanding the Depths: Exploring the Complexities of Depression"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/urbanist_bold"
+                android:text="Sunday, 12 August 2024"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:layout_editor_absoluteX="21dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/mcv_1"
+            tools:layout_editor_absoluteX="21dp">
+
+            <ImageView
+                android:id="@+id/iv_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/item_home_image" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="sed sagittis felis lobortis non. Donec laoreet dapibus imperdiet. Praesent eu ullamcorper odio. Sed vulputate, eros et consectetur egestas, massa felis auctor turpis, id volutpat odio orci eget mi. Quisque ultrices nunc ipsum, vitae cursus lacus maximus eu. Sed lacinia rutrum ante a iaculis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris consequat est sit amet sagittis lacinia."
+            android:textColor="@color/grey_dark"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mental</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_ultimate">Welcome to the ultimate freud UI Kit!</string>
+    <string name="your_midfull_mental">Your mindful mental health AI companion for everyone, anywhere 🍃</string>
+</resources>

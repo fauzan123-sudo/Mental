@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearanceOverlayExtended" parent="">
+        <item name="cornerFamily">rounded</item>
+<!--        <item name="cornerSize">0dp</item>-->
+<!--        <item name="cornerSizeTopLeft">50%</item>-->
+        <item name="cornerSize">50dp</item>
+    </style>
+
+    <style name="TextOnBoarding" parent="">
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textSize">@dimen/_25ssp</item>
+    </style>
+
+    <style name="TextUrban10" parent="">
+        <item name="android:fontFamily">@font/urbanist_bold</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="TextUrban15ExtraBold" parent="">
+        <item name="android:fontFamily">@font/urbanist_extra_bold</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="TextUrban15Medium" parent="">
+        <item name="android:fontFamily">@font/urbanist_medium</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+
+    <style name="TextUrban15SemiBold" parent="">
+        <item name="android:fontFamily">@font/urbanist_semi_bold</item>
+        <item name="android:textSize">@dimen/_15ssp</item>
+    </style>
+</resources>

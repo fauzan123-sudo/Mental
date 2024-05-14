@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F4F2"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.main.ResultFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:fontFamily="@font/urbanist_extra_bold"
+            android:text="Result"
+            android:textColor="@color/secondary"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView6">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_diagnosa_id"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnosa ID"
+                android:textColor="@color/green"
+                app:layout_constraintBottom_toTopOf="@+id/tv_depression_level"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_depression_level"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tingkat Depresi"
+                android:textColor="@color/green"
+                app:layout_constraintBottom_toTopOf="@+id/tv_persen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_diagnosa_id" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_persen"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presentase"
+                android:textColor="@color/green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_depression_level" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_diagnosa_id"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagnosa ID"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintBottom_toTopOf="@+id/tv_depression_level"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_depression_level"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tingkat Depresi"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintBottom_toTopOf="@+id/tv_persen"
+                app:layout_constraintEnd_toEndOf="@+id/tv_diagnosa_id"
+                app:layout_constraintTop_toBottomOf="@+id/tv_diagnosa_id" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_persen"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presentase"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_depression_level"
+                app:layout_constraintTop_toBottomOf="@+id/tv_depression_level" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_expert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView8"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAKAR"
+                android:textColor="@color/secondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.60" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_no"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:textColor="@color/pink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView8" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_symptom1"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:text="Gejala"
+                android:textColor="@color/pink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView8" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_value_mb_md"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nilai (MB - MD)"
+                android:textColor="@color/pink"
+                app:layout_constraintStart_toEndOf="@+id/guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView8" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_expert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/txt_no"
+                tools:layout_editor_absoluteX="13dp"
+                tools:listitem="@layout/item_expert" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_user_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cl_expert">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView9"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textColor="@color/secondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_symptom"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="Gejala"
+                android:textColor="@color/primary"
+                app:layout_constraintEnd_toStartOf="@+id/txt_symptom_value"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView9" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_symptom_value"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nilai"
+                android:textColor="@color/primary"
+                app:layout_constraintStart_toEndOf="@+id/txt_symptom"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView9" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_user_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_symptom"
+                tools:layout_editor_absoluteX="26dp"
+                tools:listitem="@layout/item_user_value" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_value1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cl_user_value">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_result1"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil"
+                android:textColor="@color/secondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_result_value1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nilai"
+                android:textColor="@color/ungu"
+                style="@style/TextUrban15ExtraBold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_result1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_value1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_result_value1"
+                tools:layout_editor_absoluteX="26dp"
+                tools:listitem="@layout/item_value" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_value2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cl_value1">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_result2"
+                style="@style/TextUrban15ExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil"
+                android:textColor="@color/secondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_result2"
+                style="@style/TextUrban15SemiBold"
+                android:textColor="@color/dark_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P001 | Gangguan Mood"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_result2" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_result2_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_grey"
+                style="@style/TextUrban15Medium"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:text="Jadi dapat disimpulkan bahwa pasien mengalami tingkat depresi yaitu Depresi Ringan dengan tingkat kepastian yaitu 4 %"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_result2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_result3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cl_value2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txt_mood_problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gangguan Mood"
+                android:textColor="@color/dark_grey"
+                style="@style/TextUrban15SemiBold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_user_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@+id/txt_mood_problem" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_grey"
+                style="@style/TextUrban15Medium"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:text="Kembali"
+            android:backgroundTint="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_result3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

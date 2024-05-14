@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mcv_assessment"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="32dp"
+    app:strokeColor="@color/grey"
+    app:strokeWidth="@dimen/_3sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/row_assessment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/img_assessment"
+            android:layout_width="wrap_content"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_alien"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_assessment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_assessment" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_assessment"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_height="wrap_content"
+            android:text="Tidak Yakin"
+            android:fontFamily="@font/urbanist_bold"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_assessment"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rb_assessment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_radio_unactive"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

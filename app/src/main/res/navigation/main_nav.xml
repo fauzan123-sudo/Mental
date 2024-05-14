@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.infinity.mental.ui.fragment.main.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_assessmentFragment"
+            app:destination="@id/assessmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_blogFragment"
+            app:destination="@id/blogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailBlogFragment"
+            app:destination="@id/detailBlogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assessmentFragment"
+        android:name="com.infinity.mental.ui.fragment.main.AssessmentFragment"
+        android:label="fragment_assessment"
+        tools:layout="@layout/fragment_assessment">
+        <action
+            android:id="@+id/action_assessmentFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.infinity.mental.ui.fragment.main.BlogFragment"
+        android:label="fragment_blog"
+        tools:layout="@layout/fragment_blog">
+        <action
+            android:id="@+id/action_blogFragment_to_detailBlogFragment"
+            app:destination="@id/detailBlogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailBlogFragment"
+        android:name="com.infinity.mental.ui.fragment.main.DetailBlogFragment"
+        android:label="fragment_detail_blog"
+        tools:layout="@layout/fragment_detail_blog" >
+        <argument
+            android:name="detailBlog"
+            app:argType="com.infinity.mental.data.model.blog.Data" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.infinity.mental.ui.fragment.main.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="dataDiagnostic"
+            app:argType="string" />
+    </fragment>
+</navigation>
