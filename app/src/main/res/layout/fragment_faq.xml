@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.faq.FaqFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:text="FAQ (Frequently Asked Questions)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Apa itu aplikasi ini?"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:text="Aplikasi ini adalah alat untuk membantu Anda mengukur dan mengelola kesehatan mental Anda melalui berbagai fitur seperti penilaian kesehatan mental, pelacakan suasana hati, meditasi, dan konten edukatif."
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="2. Bagaimana cara kerja penilaian kesehatan mental di aplikasi ini?"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:text="Penilaian kesehatan mental terdiri dari serangkaian pertanyaan yang dirancang oleh profesional kesehatan mental. Jawaban Anda akan membantu mengidentifikasi tingkat stres, kecemasan, atau kondisi mental lainnya yang mungkin Anda alami"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="3. Bagaimana cara melakukan pelacakan suasana hati?"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:text="Anda dapat mencatat suasana hati Anda setiap hari melalui fitur pelacakan suasana hati. Pilih suasana hati yang sesuai, tambahkan catatan jika diperlukan, dan simpan entri tersebut"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="4. Apakah aplikasi ini dapat menggantikan terapi dengan profesional kesehatan mental?"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:text="Tidak, aplikasi ini dirancang sebagai alat pendukung dan tidak dimaksudkan untuk menggantikan perawatan oleh profesional kesehatan mental. Jika Anda merasa membutuhkan bantuan profesional, silakan hubungi psikolog atau psikiater."
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="5. Apakah data saya aman?"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_13sdp"
+            android:text="Ya, karena anda tidak memerlukan login untuk menggunakan aplikasi ini, dan aplikasi sangat mudah digunakan."
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:text="Kembali"
+            android:id="@+id/btn_back"
+            android:backgroundTint="@color/secondary"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

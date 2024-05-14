@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_detailBlogFragment"
             app:destination="@id/detailBlogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_faqFragment"
+            app:destination="@id/faqFragment" />
     </fragment>
     <fragment
         android:id="@+id/assessmentFragment"
@@ -56,4 +59,9 @@
             android:name="dataDiagnostic"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.infinity.mental.ui.fragment.faq.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
 </navigation>

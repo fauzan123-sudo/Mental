@@ -31,6 +31,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.materialCardView3.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_faqFragment)
+        }
+
         setUpSearch()
 
         setUpData("")
