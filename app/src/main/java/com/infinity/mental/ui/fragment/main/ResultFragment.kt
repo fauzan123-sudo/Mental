@@ -11,10 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.infinity.mental.adapter.AdapterExpert
 import com.infinity.mental.adapter.AdapterResult
-import com.infinity.mental.adapter.AdapterUserValue
 import com.infinity.mental.data.model.result.Artikel
 import com.infinity.mental.data.model.result.DiagnosaDipilih
-import com.infinity.mental.data.model.result.Gejala_Nilai
 import com.infinity.mental.data.model.result.Hasil
 import com.infinity.mental.data.model.result.Pakar
 import com.infinity.mental.databinding.FragmentResultBinding
@@ -66,9 +64,9 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
                     binding.tvDepressionLevel.text =
                         data.diagnosa_dipilih.kode_depresi.kode_depresi + "|" + data.diagnosa_dipilih.kode_depresi.depresi
                     binding.tvPersen.text =
-                        data.hasil.value.toString() +"%"
+                        data.hasil.value + "%"
                     loadExpert(data.pakar)
-                    loadUserValue(data.gejala_by_user)
+//                    loadUserValue(data.gejala_by_user)
                     loadResult1(data.cf_kombinasi.cf)
                     loadResult2(data.hasil, data.diagnosa_dipilih)
                     loadLastResult(data.artikel)
@@ -89,8 +87,9 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
 
     @SuppressLint("SetTextI18n")
     private fun loadResult2(hasil: Hasil, diagnosaDipilih: DiagnosaDipilih) {
-        binding.tvResult2.text = diagnosaDipilih.kode_depresi.kode_depresi + "| ${diagnosaDipilih.value}"
-        val formattedCf = String.format("%.2f", hasil.value)
+        binding.tvResult2.text =
+            diagnosaDipilih.kode_depresi.kode_depresi + "| ${diagnosaDipilih.value}"
+        val formattedCf = String.format("%.2f", hasil.value.toDouble())
         binding.tvResult2Content.text =
             "Jadi dapat disimpulkan bahwa pasien mengalami tingkat depresi yaitu Depresi Ringan dengan tingkat kepastian yaitu ${formattedCf}%"
     }

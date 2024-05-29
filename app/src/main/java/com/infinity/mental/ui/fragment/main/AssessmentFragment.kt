@@ -1,6 +1,7 @@
 package com.infinity.mental.ui.fragment.main
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -40,7 +41,7 @@ class AssessmentFragment :
     @SuppressLint("SetTextI18n")
     private fun loadApi(parameters: Int) {
         Log.d("TAG", "loadApi: parameter $counterNumber")
-        binding.btnNext.isEnabled = false
+        buttonDisable()
         myViewModel.requestQuestionnaire(parameters)
         myViewModel.listQuestionnaireResponse.observe(viewLifecycleOwner) {
             when (it) {
@@ -74,6 +75,15 @@ class AssessmentFragment :
                 }
             }
         }
+    }
+
+    private fun buttonDisable(){
+        binding.btnNext.isEnabled = false
+        binding.btnNext.setTextColor(Color.WHITE)
+    }
+
+    private fun buttonEnable(){
+        binding.btnNext.isEnabled = true
     }
 
     private fun loadRecyclerView(
@@ -110,7 +120,7 @@ class AssessmentFragment :
 
 
     private fun nextButton() {
-        binding.btnNext.isEnabled = true
+       buttonEnable()
         binding.btnNext.setOnClickListener {
             parameter++
 //            myViewModel.loadNextQuestionnaire(parameter)
@@ -120,7 +130,7 @@ class AssessmentFragment :
 
     private fun finishButton(result: String) {
         val newResult = result.trimEnd(',')
-        binding.btnNext.isEnabled = true
+        buttonEnable()
         binding.btnNext.text = "Selesai"
         binding.btnNext.setOnClickListener {
             Log.d("Data  kuisioner", "{$newResult}")

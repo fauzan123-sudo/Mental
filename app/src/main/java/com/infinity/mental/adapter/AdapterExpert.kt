@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.infinity.mental.data.model.result.Pakar
 import com.infinity.mental.databinding.ItemExpertBinding
 import javax.inject.Inject
 import javax.inject.Singleton

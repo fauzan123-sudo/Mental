@@ -7,7 +7,6 @@ import com.infinity.mental.adapter.AdapterAssessment
 import com.infinity.mental.data.model.blog.ModelBlogResponse
 import com.infinity.mental.data.model.quisioner.ModelQuestionnaire
 import com.infinity.mental.data.model.quisioner.send.ModelSendQuisionnare
-import com.infinity.mental.data.model.result.ModelResultResponse
 import com.infinity.mental.data.repositories.MainRepository
 import com.infinity.mental.utils.NetworkResult
 import com.infinity.mental.utils.SingleLiveEvent
