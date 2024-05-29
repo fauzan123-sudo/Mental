@@ -6,4 +6,5 @@ data class Pakar(
     val kode_gejala: String,
     val mb: Double,
     val md: Double,
+    val gejala: String
 )

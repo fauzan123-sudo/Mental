@@ -117,7 +117,7 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
 
     private fun loadUserValue(gejalaByUser: List<List<Any>>) {
         val gejalaList = gejalaByUser.map {
-            Gejala_Nilai(it[0] as String, it[1] as Double)
+            Gejala_Nilai(it[0] as String, it[1] as Double, it[2] as String)
         }
         Log.d("TAG", "load gejalaByUser: $gejalaList")
         val adapterUserValue = AdapterUserValue(gejalaList)

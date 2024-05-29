@@ -17,6 +17,7 @@ class AdapterUserValue (private val gejalaList: List<Any>) : RecyclerView.Adapte
         fun bind(data: Gejala_Nilai) {
             binding.tvSymptom.text = data.kode
             binding.tvValue.text = data.skor.toString()
+            binding.tvQuestion.text = data.question
         }
 
 

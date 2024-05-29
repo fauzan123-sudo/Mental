@@ -22,6 +22,7 @@ class AdapterExpert @Inject constructor() : RecyclerView.Adapter<AdapterExpert.V
             val totalSymptom = expert?.mb?.minus(expert.md) ?: 0.0
             val formattedCf = String.format("%.2f", totalSymptom)
             binding.tvValue.text = formattedCf
+            binding.tvGejala.text = expert?.gejala
         }
 
     }
