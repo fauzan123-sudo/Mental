@@ -14,7 +14,7 @@
 
     <style name="TextUrban10" parent="">
         <item name="android:fontFamily">@font/urbanist_bold</item>
-        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
     </style>
 
     <style name="TextUrban15ExtraBold" parent="">

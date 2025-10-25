@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.infinity.mental.adapter.AdapterExpert
 import com.infinity.mental.adapter.AdapterResult
+import com.infinity.mental.adapter.AdapterUserValue
 import com.infinity.mental.data.model.result.Artikel
 import com.infinity.mental.data.model.result.DiagnosaDipilih
+import com.infinity.mental.data.model.result.Gejala_Nilai
 import com.infinity.mental.data.model.result.Hasil
 import com.infinity.mental.data.model.result.Pakar
 import com.infinity.mental.databinding.FragmentResultBinding
@@ -66,7 +68,7 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
                     binding.tvPersen.text =
                         data.hasil.value + "%"
                     loadExpert(data.pakar)
-//                    loadUserValue(data.gejala_by_user)
+                    loadUserValue(data.gejala_by_user)
                     loadResult1(data.cf_kombinasi.cf)
                     loadResult2(data.hasil, data.diagnosa_dipilih)
                     loadLastResult(data.artikel)
@@ -116,7 +118,7 @@ class ResultFragment : BaseFragment<FragmentResultBinding>(FragmentResultBinding
 
     private fun loadUserValue(gejalaByUser: List<List<Any>>) {
         val gejalaList = gejalaByUser.map {
-            Gejala_Nilai(it[0] as String, it[1] as Double)
+            Gejala_Nilai(it[0] as String, it[1] as Double, it[2] as String)
         }
         Log.d("TAG", "load gejalaByUser: $gejalaList")
         val adapterUserValue = AdapterUserValue(gejalaList)

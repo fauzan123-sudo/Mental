@@ -3,15 +3,17 @@ package com.infinity.mental.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.infinity.mental.data.model.result.Gejala_Nilai
 import com.infinity.mental.databinding.ItemUserValueBinding
 
 class AdapterUserValue (private val gejalaList: List<Any>) : RecyclerView.Adapter<AdapterUserValue.ViewHolder>() {
     inner class ViewHolder(val binding: ItemUserValueBinding) :
         RecyclerView.ViewHolder(binding.root) {
-//        fun bind(data: Gejala_Nilai) {
-//            binding.tvSymptom.text = data.kode
-//            binding.tvValue.text = data.skor.toString()
-//        }
+        fun bind(data: Gejala_Nilai) {
+            binding.tvSymptom.text = data.kode
+            binding.tvSick.text = data.question
+            binding.tvValue.text = data.skor.toString()
+        }
 
 
     }
@@ -23,7 +25,7 @@ class AdapterUserValue (private val gejalaList: List<Any>) : RecyclerView.Adapte
     override fun getItemCount() = gejalaList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        val data = gejalaList[position] as Gejala_Nilai
-//        holder.bind(data)
+        val data = gejalaList[position] as Gejala_Nilai
+        holder.bind(data)
     }
 }

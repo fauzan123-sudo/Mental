@@ -6,14 +6,13 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_symptom"
+        style="@style/TextUrban15Medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="G003 | P001"
-        style="@style/TextUrban15Medium"
+        android:textAlignment="center"
         android:textColor="@color/dark_grey"
-        android:layout_marginStart="@dimen/_20sdp"
-        app:layout_constraintEnd_toStartOf="@+id/tv_value"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,17 +21,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50" />
+        app:layout_constraintGuide_percent="0.30" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_value"
+        android:id="@+id/tv_sick"
+        style="@style/TextUrban15Medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="0.4"
+        android:textAlignment="center"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_value"
         style="@style/TextUrban15Medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0.4"
+        android:textAlignment="center"
         android:textColor="@color/dark_grey"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
 

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.infinity.mental.data.model.result.Pakar
 import com.infinity.mental.databinding.ItemExpertBinding
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -18,7 +19,10 @@ class AdapterExpert @Inject constructor() : RecyclerView.Adapter<AdapterExpert.V
             val number = position + 1
             binding.tvNo.text = number.toString()
             binding.tvSymptom.text = expert?.kode_gejala + "|" + expert?.kode_depresi
-            val totalSymptom = expert?.mb?.minus(expert.md) ?: 0.0
+            val mb = expert?.mb?.toDoubleOrNull() ?: 0.0
+            val md = expert?.md?.toDoubleOrNull() ?: 0.0
+            val totalSymptom = mb - md
+//            val totalSymptom = expert?.mb?.minus(expert.md) ?: 0.0
             val formattedCf = String.format("%.2f", totalSymptom)
             binding.tvValue.text = formattedCf
         }

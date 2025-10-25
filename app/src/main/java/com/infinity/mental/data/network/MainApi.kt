@@ -3,6 +3,7 @@ package com.infinity.mental.data.network
 import com.infinity.mental.data.model.blog.ModelBlogResponse
 import com.infinity.mental.data.model.quisioner.ModelQuestionnaire
 import com.infinity.mental.data.model.quisioner.send.ModelSendQuisionnare
+import com.infinity.mental.data.model.result.ModelResultResponse
 import retrofit2.Response
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
